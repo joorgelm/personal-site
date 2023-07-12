@@ -5,22 +5,28 @@ on:
     branches: [ main ]
   workflow_dispatch:
 jobs:
-  deployment:
-    runs-on: ubuntu-20.04
+  deploy:
+    runs-on: ubuntu-latest
     timeout-minutes: 5
-    environment: production
+    environment: github-pages
+    needs: jekyll-build
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          persist-credentials: false
+      - name: Configure Pages
+        uses: actions/configure-pages@v3
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version-file: '.nvmrc'
-      - name: Install
-        run: npm ci
-      - name: Build and Deploy
+      - name: Pre deploy
+        run: npm run predeploy
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: './build'
         env:
           NODE_ENV: production
           # Remove this line if you would like to skip using google analytics
@@ -29,8 +35,7 @@ jobs:
           REACT_APP_PUBLIC_URL: ${{ secrets.REACT_APP_PUBLIC_URL_PATH }}
           # This is set automatically by github
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git config user.name "Automated"
-          git config user.email "actions@users.noreply.github.com"
-          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/joorgelm/personal-site.git
-          npm run deploy
+
+      - name: Deploy artifact
+        id: deployment
+        uses: actions/deploy-pages@v1
