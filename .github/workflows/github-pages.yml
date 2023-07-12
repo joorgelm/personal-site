@@ -20,14 +20,13 @@ jobs:
           persist-credentials: false
       - name: Build React
         uses: bitovi/github-actions-react-to-ghp@v1.2.0
-        env:
-          NODE_ENV: production
-          REACT_APP_GA_TRACKING_ID: ${{ secrets.REACT_APP_GA_TRACKING_ID_PATH }}
-          REACT_APP_CV_URL: ${{ secrets.REACT_APP_CV_URL_PATH }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           path: build
           checkout: false
+        env:
+          REACT_APP_GA_TRACKING_ID: ${{ secrets.REACT_APP_GA_TRACKING_ID_PATH }}
+          REACT_APP_CV_URL: ${{ secrets.REACT_APP_CV_URL_PATH }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Configure Pages
         uses: actions/configure-pages@v3
       - name: Upload GitHub Pages artifact
