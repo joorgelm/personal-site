@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/787.11363a3e.chunk.js","mappings":"0HAMA,UAJe,WACbA,OAAOC,SAASC,KAHWC,wEAI7B,C","sources":["pages/Resume.js"],"sourcesContent":["const { REACT_APP_CV_URL } = process.env;\n\nconst Resume = () => {\n  window.location.href = REACT_APP_CV_URL;\n};\n\nexport default Resume;\n"],"names":["window","location","href","process"],"sourceRoot":""}
