@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 
 import ContactIcons from '../Contact/ContactIcons';
 
-const { REACT_APP_PUBLIC_URL } = process.env; // set automatically from package.json:homepage
+// const { REACT_APP_PUBLIC_URL } = process.env; // set automatically from package.json:homepage
 
 const SideBar = () => (
   <section id="sidebar">
     <section id="intro">
       <Link to="/" className="logo">
-        <img src={`${REACT_APP_PUBLIC_URL}/images/me.jpg`} alt="" />
+        <img src="/images/me.jpg" alt="" />
       </Link>
       <header>
         <h2>Jorge Luís Melgarejo</h2>

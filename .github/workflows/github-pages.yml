@@ -40,7 +40,6 @@ jobs:
           # Remove this line if you would like to skip using google analytics
           REACT_APP_GA_TRACKING_ID: ${{ secrets.REACT_APP_GA_TRACKING_ID_PATH }}
           REACT_APP_CV_URL: ${{ secrets.REACT_APP_CV_URL_PATH }}
-          REACT_APP_PUBLIC_URL: ${{ secrets.REACT_APP_PUBLIC_URL_PATH }}
           # This is set automatically by github
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

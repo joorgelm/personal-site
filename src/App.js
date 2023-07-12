@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Main from './layouts/Main'; // fallback for lazy pages
 import './static/css/main.scss'; // All of our styles
 
-const { REACT_APP_PUBLIC_URL } = process.env;
+// const { REACT_APP_PUBLIC_URL } = process.env;
 
 // Every route - we lazy load so that each page can be chunked
 // NOTE that some of these chunks are very small. We should optimize
@@ -15,7 +15,7 @@ const Projects = lazy(() => import('./pages/Projects'));
 const Resume = lazy(() => import('./pages/Resume'));
 
 const App = () => (
-  <BrowserRouter basename={REACT_APP_PUBLIC_URL}>
+  <BrowserRouter>
     <Suspense fallback={<Main />}>
       <Routes>
         <Route path="/" element={<About />} />
