@@ -1,6 +1,11 @@
 {
-  "name": "personal-site",
+  "name": "joorgelm.github.io",
   "version": "4.0.0",
+  "homepage": "https://joorgelm.github.io/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joorgelm/joorgelm.github.io"
+  },
   "engines": {
     "node": ">=14.x"
   },
