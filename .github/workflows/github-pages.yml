@@ -20,13 +20,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16.x'
-      - name: Install
-        run: npm ci
-      - name: Pre deploy
-        run: |
-          git config user.name "Automated"
-          git config user.email "actions@users.noreply.github.com"
-          npm run build && react-snap
+      - name: Build React
+        uses: bitovi/github-actions-react-to-ghp@v1.2.0
+        with:
+          path: build
+          checkout: false
+          build_command: npm run build && react-snap
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v1
         with:
