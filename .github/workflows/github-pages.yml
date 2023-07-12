@@ -19,7 +19,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version-file: '.nvmrc'
+          node-version: '16.x'
       - name: Pre deploy
         run: npm run predeploy
       - name: Upload GitHub Pages artifact
