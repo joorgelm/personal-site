@@ -1,31 +1,38 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import Markdown from 'markdown-to-jsx';
 import Main from '../layouts/Main';
 
-import Cell from '../components/Projects/Cell';
-import data from '../data/projects';
+const Projects = () => {
+  const [markdown, setMarkdown] = useState('');
 
-const Projects = () => (
-  <Main
-    title="Projects"
-    description="Learn about Michael D'Angelo's projects."
-  >
-    <article className="post" id="projects">
-      <header>
-        <div className="title">
-          <h2><Link to="/projects">Projects</Link></h2>
-          <p>A selection of projects that I&apos;m not too ashamed of</p>
-        </div>
-      </header>
-      {data.map((project) => (
-        <Cell
-          data={project}
-          key={project.title}
-        />
-      ))}
-    </article>
-  </Main>
-);
+  useEffect(() => {
+    import('../data/projects.md')
+      .then((res) => {
+        fetch(res.default)
+          .then((r) => r.text())
+          .then(setMarkdown);
+      });
+  });
+
+  return (
+    <Main
+      title="Projetos"
+      description="Projetos"
+    >
+      <article className="post markdown" id="projects">
+        <header>
+          <div className="title">
+            <h2><Link to="/projects">Projetos</Link></h2>
+          </div>
+        </header>
+        <Markdown>
+          {markdown}
+        </Markdown>
+      </article>
+    </Main>
+  );
+};
 
 export default Projects;

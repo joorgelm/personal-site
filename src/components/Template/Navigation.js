@@ -16,7 +16,7 @@ const Navigation = () => (
       <ul>
         {routes.filter((l) => !l.index).map((l) => (
           <li key={l.label}>
-            <Link to={l.path}>{l.label}</Link>
+            <Link to={l.path} target={l.blank ? '_blank' : '_self'}>{l.label}</Link>
           </li>
         ))}
       </ul>

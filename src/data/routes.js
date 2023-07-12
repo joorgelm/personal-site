@@ -1,27 +1,20 @@
 const routes = [
   {
     index: true,
-    label: "Michael D'Angelo",
+    label: 'Jorge Luís Melgarejo',
     path: '/',
   },
   {
-    label: 'About',
-    path: '/about',
-  },
-  {
-    label: 'Resume',
+    label: 'Curriculum',
     path: '/resume',
+    blank: true,
   },
   {
-    label: 'Projects',
+    label: 'Projetos',
     path: '/projects',
   },
   {
-    label: 'Stats',
-    path: '/stats',
-  },
-  {
-    label: 'Contact',
+    label: 'Fale comigo',
     path: '/contact',
   },
 ];
