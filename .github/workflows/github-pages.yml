@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: '16.x'
       - name: Pre deploy
-        run: npm run predeploy
+        run: npm run build && react-snap
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v1
         with:
