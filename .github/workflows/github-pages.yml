@@ -9,7 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     environment: github-pages
-    needs: jekyll-build
     permissions:
       contents: read
       pages: write
