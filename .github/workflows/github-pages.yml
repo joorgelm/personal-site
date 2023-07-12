@@ -18,14 +18,13 @@ jobs:
         uses: actions/checkout@v3
         with:
           persist-credentials: false
-#      - name: Setup Node
-#        uses: actions/setup-node@v3
-#        with:
-#          node-version: '16.x'
-#      - name: JESUS
-#        run: npm install
       - name: Build React
         uses: bitovi/github-actions-react-to-ghp@v1.2.0
+        env:
+          NODE_ENV: production
+          REACT_APP_GA_TRACKING_ID: ${{ secrets.REACT_APP_GA_TRACKING_ID_PATH }}
+          REACT_APP_CV_URL: ${{ secrets.REACT_APP_CV_URL_PATH }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           path: build
           checkout: false
@@ -35,13 +34,6 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: './build'
-        env:
-          NODE_ENV: production
-          # Remove this line if you would like to skip using google analytics
-          REACT_APP_GA_TRACKING_ID: ${{ secrets.REACT_APP_GA_TRACKING_ID_PATH }}
-          REACT_APP_CV_URL: ${{ secrets.REACT_APP_CV_URL_PATH }}
-          # This is set automatically by github
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Deploy artifact
         id: deployment
