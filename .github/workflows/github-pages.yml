@@ -14,12 +14,16 @@ jobs:
       pages: write
       id-token: write
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
 #      - name: Setup Node
 #        uses: actions/setup-node@v3
 #        with:
 #          node-version: '16.x'
-      - name: JESUS
-        run: npm install
+#      - name: JESUS
+#        run: npm install
       - name: Build React
         uses: bitovi/github-actions-react-to-ghp@v1.2.0
         with:
