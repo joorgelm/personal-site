@@ -4,7 +4,7 @@
 
 # Serviço de extração e análise de dados textuais a partir de imagens e arquivos pdf
 
-**Tecnologias**: Java 17, Spring Boot 3, ReactJS, plataforma Azure.
+**Tecnologias**: Java 17, Spring Boot 3, ReactJS, Docker, Azure Functions e Azure Container Apps.
 
 **Link**: https://jeto.jlmelgarejo.tech/
 
