@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import data from '../../data/contact';
 
 const ContactIcons = () => (
-  <ul className="icons">
+  <ul className="icons fa-2x">
     {data.map((s) => (
       <li key={s.label}>
         <a href={s.link}>

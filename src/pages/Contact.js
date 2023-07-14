@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Main from '../layouts/Main';
-import ContactIcons from '../components/Contact/ContactIcons';
 
 const Contact = () => (
   <Main
@@ -21,7 +20,6 @@ const Contact = () => (
           <span>melgarejo.colarte@gmail.com</span>
         </a>
       </div>
-      <ContactIcons />
     </article>
   </Main>
 );

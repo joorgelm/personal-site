@@ -20,6 +20,17 @@
 
 **Link**: https://github.com/joorgelm/habita
 
+
+--- 
+
+## Ruppell
+
+# Um wrapper para extração de conteúdo em lote com suporte a diversos tipos de arquivos (pdf, docx, jpeg, jpg, png).
+
+**Tecnologias**: Python, Tesseract, Pandas.
+
+**Link**: https://github.com/joorgelm/ruppell
+
 <br><br>
 
 
