@@ -1,6 +1,6 @@
 ## Jeto
 
-<img src="https://media.licdn.com/dms/image/sync/D4D27AQF347n-esl0kg/articleshare-shrink_800/0/1688258658165?e=1689728400&v=beta&t=aM8CMmAnh53cIBuDu8l0nxqCEck3tUlU7D4q61T90fc" align="right" width="100vw">
+<img src="https://github.com/joorgelm/jeto/blob/main/assets/logo-transp.png?raw=true" align="right" width="100vw">
 
 # Serviço de extração e análise de dados textuais a partir de imagens e arquivos pdf
 
@@ -12,7 +12,7 @@
 
 ## Habita
 
-<img src="https://github.com/joorgelm/jeto/blob/main/assets/logo-transp.png?raw=true" align="right" width="100vw">
+<img src="https://github.com/joorgelm/habita/blob/master/hbt.png?raw=true" align="right" width="100vw">
 
 # Aplicação para atender demanda governamental de cadastro e distribuição de casas populares
 
