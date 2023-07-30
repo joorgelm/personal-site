@@ -12,7 +12,7 @@
 
 ## Habita
 
-<img src="https://github.com/joorgelm/habita/blob/master/hbt.png?raw=true" align="right" width="100vw">
+<img src="https://github.com/joorgelm/jeto/blob/main/assets/logo-transp.png?raw=true" align="right" width="100vw">
 
 # Aplicação para atender demanda governamental de cadastro e distribuição de casas populares
 
