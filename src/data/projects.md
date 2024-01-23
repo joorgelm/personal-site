@@ -1,3 +1,13 @@
+## Rinha de backend
+
+# Minha versão da rinha de backend
+
+**Tecnologias**: Java 17, Spring Boot 3, PostgreSQL, Docker.
+
+**Link**: https://github.com/joorgelm/rinha-2023
+
+--- 
+
 ## Jeto
 
 <img src="https://github.com/joorgelm/jeto/blob/main/assets/logo-transp.png?raw=true" align="right" width="100vw">
