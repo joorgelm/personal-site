@@ -19,7 +19,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Build React
-        uses: bitovi/github-actions-react-to-ghp@v1.2.0
+        uses: bitovi/github-actions-react-to-ghp@v1.2.2
         with:
           path: build
           checkout: false
