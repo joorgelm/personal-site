@@ -16,7 +16,7 @@
 
 **Tecnologias**: Java 17, Spring Boot 3, ReactJS, Docker, Azure Functions e Azure Container Apps.
 
-**Link**: https://jeto.jlmelgarejo.tech/
+**Link**: https://github.com/joorgelm/jeto
 
 --- 
 
